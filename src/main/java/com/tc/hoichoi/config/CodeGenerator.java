@@ -24,7 +24,7 @@ public class CodeGenerator {
 	
 	private String generateSequence() {
 		String seq = "BigB";
-		System.out.println("Sequence Code : "+seq);
+		System.out.println("Sequence Codes : "+seq);
 		return String.valueOf(seq);
 	}
 	
