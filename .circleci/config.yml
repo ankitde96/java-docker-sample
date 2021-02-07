@@ -26,10 +26,8 @@ jobs:
       
 
 workflows:
-  sonarcloud:
+  vendorauth:
     jobs:
       - build:
           context: SonarCloud
-  heroku_deploy:
-    jobs:
       - deploy
