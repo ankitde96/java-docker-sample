@@ -1,3 +1,5 @@
+[![ankitde96](https://circleci.com/gh/ankitde96/java-docker-sample.svg?style=svg)]
+
 # Docker Build Command
 docker build -t vendorauth .
 
@@ -28,4 +30,3 @@ Change the IP/Docker Container Name
 Change User & Password
 spring.jpa.hibernate.ddl-auto=create
 
-[![ankitde96](https://circleci.com/gh/ankitde96/java-docker-sample.svg?style=svg)] (https://circleci.com/gh/ankitde96/java-docker-sample)
