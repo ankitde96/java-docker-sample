@@ -1,5 +1,8 @@
 version: 2.1
 
+orbs:
+  heroku: circleci/heroku@1.2.5
+
 jobs:
   build:
     docker:
@@ -10,8 +13,23 @@ jobs:
           name: Analyze on SonarCloud
           command: mvn verify sonar:sonar
 
+  deploy:
+    executor: heroku/default
+    steps: 
+      - checkout
+      - heroku/install
+      - run:
+          command: >
+            echo "The command above installs Heroku, the command below deploys.
+            What you do inbetween is up to you!"
+      - heroku/deploy-via-git
+      
+
 workflows:
-  main:
+  sonarcloud:
     jobs:
       - build:
           context: SonarCloud
+  heroku_deploy:
+    jobs:
+      - deploy
